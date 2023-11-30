@@ -1,0 +1,77 @@
+apt update
+    2  sudo apt install php -y
+    3  sudo service nginx restart
+    4  mkdir php
+    5  cd php/
+    6  vi index.php
+    7  apt install nginx
+    8  cd
+    9  cat /etc/nginx/nginx.conf
+   10  cd /usr/share/nginx/html
+   11  ll
+   12  vi index.php
+   13  service nginx restart
+   14  service nginx status
+   15  cls
+   16  cd /var/www/html/
+   17  ll
+   18  service nginx start
+   19  vi index.php
+   20  service apache status
+   21  netstat -anlp | grep 80
+   22  apt install net-tools 
+   23  netstat -anlp | grep 80
+   24  service apache2 status
+   25  service apache2 restart
+   26  mysql
+   27  apt install mysql-client-core-8.0
+   28  mysql
+   29  mysql --version
+   30  ll
+   31  vi signup.php
+   32  service apache2 restart
+   33  vi signup.php
+   34  mysql -h endpoint -P 3306 -u admin -p
+   35  vi signup.php
+   36  service apache2 restart
+   37  ls
+   38  cat signup.php 
+   39  cat /var/log/apache2/error.log
+   40  apt-get install php-mysqli
+   41  cd /var/www/html/
+   42  vi phpinfo.php
+   43  ls
+   44  mv signup.php signup
+   45  vi signup.php
+   46  cat signup
+   47  vi signup.php 
+   48  service apache2 restart
+   49  mysql -h endpoint -P 3306 -u admin -p
+   50  history 
+   51  ls
+   52  cat index.php 
+   53  ls
+   54  cat signup.php
+   55  history 
+
+
+
+------------
+
+  sql commands
+
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL,
+    username VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+
+SELECT * FROM users;
+
+CREATE USER 'your_user'@'%' IDENTIFIED BY 'your_password';
+GRANT ALL PRIVILEGES ON your_database_name.* TO 'your_user'@'%';
+FLUSH PRIVILEGES;
+EXIT;
